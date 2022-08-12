@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strconv"
+
+	"github.com/runyasak/go-the-fundamentals/cal"
 )
 
 func main() {
@@ -11,7 +13,7 @@ func main() {
 	fmt.Println(greetingWithAge("Pallat", 30))
 	fmt.Println(greetingWithAgeAndDrink("Pallat", 30, "Cola"))
 	fmt.Println(isOdd(1))
-	fmt.Println(sumOfFirst(3))
+	fmt.Println(cal.SumOfFirst(3))
 	fmt.Println(isPrime(1))
 	fmt.Println(isPrime(2))
 	fmt.Println(isPrime(3))
@@ -41,19 +43,6 @@ func isOdd(n int) bool {
 
 	return false
 }
-
-// It should return sum of n, n-1, n-2, ..., 1
-// sumOfFirst(3) should return 3+2+1=6
-func sumOfFirst(n int) int {
-	result := 0
-
-	for i := 0; i < n; i++ {
-		result += n - i
-	}
-
-	return result
-}
-
 
 // A prime number is a number greater than 1 with only two factors – themselves and 1
 func isPrime(n int) bool {
